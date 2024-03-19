@@ -1,19 +1,7 @@
-// @import url(./assets/Font/AvenirNextLTPro-Regular.otf);
-// @import url(./assets/Font/AvenirNextLTPro-Demi.otf);
-// @import url(./assets/Font/AvenirNextLTPro-Bold.otf);
 
-@font-face {
-  font-family: "Avenir-Next";
-  font-style: normal;
-  font-weight: 400;
-  src: url("./assets/Font/AvenirNextLTPro-Regular.otf") format('opentype');
-}
+@use "./styles/partials/fonts.scss";
 
 body {
   font-family: Avenir-Next;
 }
 
-// body{
-//  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-//  margin: 0;
-// }

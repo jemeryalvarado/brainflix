@@ -1,0 +1,64 @@
+
+// DESKTOP & TABLET TEXT STYLES
+
+@mixin page-header{
+    font-size: 33px;
+     line-height:  44px;
+      font-weight:  700;
+    }
+
+@mixin section-header{
+    font-size: .75rem;
+    line-height:  1.25rem;
+     font-weight:  700;
+
+    }
+    
+@mixin subheader{ 
+    font-size: .875rem;
+     line-height:  1.375rem;
+      font-weight:  700;
+}
+
+@mixin body-copy{
+    font-size: .875rem;
+    line-height:  1.375rem;
+     font-weight:  400;
+}
+
+@mixin labels-buttons{
+    font-size: .75rem;
+    line-height:  1.25rem;
+     font-weight:  700;
+}
+// MOBILE TEXT STYLES
+@mixin mobile-page-header{
+    font-size: 1.5rem;
+     line-height:  2rem;
+      font-weight:  700;
+    }
+
+@mixin mobile-section-header{
+    font-size: .75rem;
+    line-height:  1.25rem;
+     font-weight:  700;
+
+    }
+    
+@mixin mobile-subheader{ 
+    font-size: .8125rem;
+     line-height:  1.125rem;
+      font-weight:  700;
+}
+
+@mixin mobile-body-copy{
+    font-size: .8125rem;
+    line-height:  1.125rem;
+     font-weight:  400;
+}
+
+@mixin mobile-labels-buttons{
+    font-size: 1rem;
+    line-height:  1.25rem;
+     font-weight:  700;
+}
