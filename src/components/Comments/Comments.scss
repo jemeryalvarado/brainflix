@@ -1,3 +1,77 @@
-.comments{
-    color: red;
+@use "../../styles/partials/fonts.scss";
+@use "../../styles/partials/partials" as *;
+@use "../../styles/partials/mixins" as *;
+
+.comments {
+  height: auto;
+  width: 90%;
+  margin: auto;
+
+  &-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+    border-bottom: solid 0.125rem $Mercury;
+  }
+}
+h5 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $Mercury;
+  font-family: Avenir-Next-Demi;
+}
+#commenttext {
+  border-radius: 0.25rem;
+  height: 10rem;
+
+  border: 2px solid #e1e1e1;
+  &:focus {
+    outline: 2px solid $BrainFlix-Blue;
+  }
+}
+#button {
+  width: 100%;
+  background-color: $BrainFlix-Blue;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  @include mobile-labels-buttons;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 20%;
+
+  img {
+    width: 10%;
+    height: 1.5rem;
+    display: flex;
+    align-items: self-start;
+  }
+}
+.comments-text {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: solid 0.125rem $Mercury;
 }

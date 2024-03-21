@@ -63,6 +63,17 @@
     cursor: pointer;
     border-radius: 0.25rem;
     @include mobile-labels-buttons;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+
+    &-icon{
+      width: 40%;
+      display: flex;
+      align-items: self-start;
+    }
   }
 
   

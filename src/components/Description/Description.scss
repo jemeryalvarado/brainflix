@@ -1,0 +1,32 @@
+@use "../../styles/partials/fonts.scss";
+@use "../../styles/partials/partials" as *;
+@use "../../styles/partials/mixins" as *;
+
+.description {
+  width: 90%;
+  margin: auto;
+
+  &-title {
+    @include mobile-page-header;
+    font-family: Avenir-Next-Bold;
+    border-bottom: solid 0.125rem $Mercury;
+  }
+
+  &-data {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: $Silver;
+
+    #channel {
+      font-family: Avenir-Next-Demi;
+      color: $BrainFlix-Black;
+    }
+    border-bottom: solid 0.125rem $Mercury;
+  }
+}
+.space {
+  display: flex;
+  gap: 0.5rem;
+}

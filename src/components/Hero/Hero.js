@@ -1,15 +1,21 @@
 import VideoList from "../Videos/Videos";
 import { useState } from "react";
+import "./Hero.scss";
 
+export default function Hero({ current, details }) {
+  let info = (id) => {
+     return details.find(item => item.id === id);
 
-
-export default function Hero({details}) { 
+  };
+  const display = info(current)
   
-    return (
-        <div>
-            <video controls poster={details.image} >
-                <source src={details.video} type="video/mp4" ></source></video> 
-        </div>
+  return (
+    <div className="video">
+      <video controls poster={display.image}>
+        <source src={display.video} type="video/mp4"></source> 
+        
+      </video>
 
-)
-} 
+    </div>
+  );
+}

@@ -1,30 +1,45 @@
+import "./Description.scss";
+import eyes from "../../assets/Icons/views.svg";
+import heart from "../../assets/Icons/likes.svg";
 
-
-
-
-export default function Description({details}) {
+export default function Description({ current, details }) {
+  let info = (id) => {
+    return details.find((item) => item.id === id);
+  };
+  const display = info(current);
 
   return (
     <>
-      <div>
-        <h1>{details.title}</h1>
-      </div>
-      <div>
-        <p>{details.channel}</p>
-        <p>{details.timestamp}</p>
-      </div>
-      <div>
-      <p>{details.views}</p>
-        <p>{details.likes}</p>
+      <section className="description">
+        <div className="description-title">
+          <h1>{display.title}</h1>
+        </div>
 
-      </div>
-      <div>
-        <p>{details.description}</p>
-      </div>
-      <div>
-        <h2>3 Comments</h2>
-      </div>
+        <section className="description-data">
+          <div>
+            <p id="channel"> By {display.channel}</p>
+            <p>{display.timestamp}</p>
+          </div>
 
+          <div>
+            <p className="space">
+              <img src={eyes} alt="views" />
+              {display.views}
+            </p>
+            <p className="space">
+              <img src={heart} alt="likes" />
+              {display.likes}
+            </p>
+          </div>
+        </section>
+
+        <div>
+          <p>{display.description}</p>
+        </div>
+        <div className="description-ammount">
+          <h4>3 Comments</h4>
+        </div>
+      </section>
     </>
   );
 }

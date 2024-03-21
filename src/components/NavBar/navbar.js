@@ -13,7 +13,11 @@ export default function NavBar() {
             <input type= 'text' placeholder="Search" className='navbar-search' ></input>
         <img src={avatar} alt="avatar" className="navbar-avatar"/>
         </div>
-            <button className="navbar-button">UPLOAD</button>
+            <button className="navbar-button"> 
+                <div className="navbar-button-icon">
+                <img className='icon' src={uploadArrow} alt="upload" />
+                </div>
+            UPLOAD</button>
         </form>
         </nav>
 
