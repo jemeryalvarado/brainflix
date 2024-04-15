@@ -1,6 +1,7 @@
 @use "../../styles/partials/fonts.scss";
 @use "../../styles/partials/partials" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/mediaqueries" as *;
 
 .description {
   width: 90%;
@@ -18,6 +19,20 @@
     flex-direction: row;
     justify-content: space-between;
     color: $Silver;
+    &-ct{
+      @include tablet{
+        display: flex;
+        flex-direction: row;
+        gap:2.5rem;
+      }
+    }
+    &-vl{
+      @include tablet{
+        display: flex;
+        flex-direction: row;
+        gap:2.5rem;
+      }
+    }
 
     #channel {
       font-family: Avenir-Next-Demi;

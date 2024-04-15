@@ -1,12 +1,21 @@
 @use "../../styles/partials/fonts.scss";
 @use "../../styles/partials/partials" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/mediaqueries" as *;
+
 
 .videos {
-  width: 90%;
-  margin: auto;
+  width: 20rem;
+  margin: 0 0 0 5%;
   display: flex;
   flex-direction: column;
+
+  
+
+  @include tablet{
+    width: 40%;
+    margin:0 0 0 5%;
+  }
 
   &-list {
     width: 100%;
@@ -34,4 +43,10 @@
   &-title {
     font-family: Avenir-Next-Demi;
   }
+}
+h2{
+  
+  font-size: 1rem;
+  color: $Mercury;
+  margin: 1rem 0 0 5%;
 }
