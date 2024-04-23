@@ -14,7 +14,7 @@ import Comments from "../../components/Comments/Comments.js";
 
 const Home = () => {
     const { id } = useParams();
-    const [current, setCurrent] = useState([0].id);
+    const [current, setCurrent] = useState('84e96018-4022-434e-80bf-000ce4cd12b8');
     const [videoDetails, setVideoDetails] = useState(null);
     const [relatedVideos, setRelatedVideos] = useState([]);
     const jlaKey = "c5f082c8-8e98-4245-8513-1866d16d5c51"; 
@@ -39,7 +39,7 @@ const Home = () => {
         .catch((error) => {
             console.error("Error fetching related videos:", error);
         });
-    }, []);
+    }, [id]);
   
     const videoClick = (id) => {
       setCurrent(id);
