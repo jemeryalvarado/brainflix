@@ -27,9 +27,11 @@ const Comments = ({ current, details }) => {
         <form>
           <h5>JOIN THE CONVERSATION</h5>
           <input id="commenttext" type="text" placeholder="Add a new comment" />
-          <button id="button">
-            <img src={comment} alt="upload" />
+          <button class="button">
+            <img src={comment} alt="comment" height={20}/>
+            <div className="button-name">
             COMMENT
+            </div>
           </button>
         </form>
       </section>

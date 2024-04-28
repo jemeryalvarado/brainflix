@@ -1,96 +1,112 @@
 @use "../../styles/partials/fonts.scss";
 @use "../../styles/partials/partials" as *;
 @use "../../styles/partials/mixins" as *;
-@use '../../styles/partials/mediaqueries' as *;
+@use "../../styles/partials/mediaqueries" as *;
 
 .navbar {
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-rows: 4fr;
+  grid-template-rows: 2fr;
   justify-items: center;
   gap: 1rem;
   padding-bottom: 1rem;
   padding-top: 1rem;
+  align-items: center;
   @include tablet {
-   grid-template-columns: 30% 70% ;
-    
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    margin: auto;
   }
-
-
+  &-logo {
+    height: 1.5625rem;
+    width: 7.5rem;
+  }
   &-form {
     display: grid;
     gap: 1rem;
     width: 90%;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: repeat(10, auto);
+    // grid-template-rows: repeat(2, auto);
+    @include tablet {
+      display: grid;
+      gap: 0rem;
+      width: 90%;
+      
+    }
+    &-bl{
+      width: 100%;
+      height: 3rem;
+      grid-column-start: 1;
+      grid-column-end: 11;
+      background-color: $BrainFlix-Blue;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    @include tablet {
+      grid-column-start: 7;
+      grid-column-end: 9;
+      grid-row-start: 1;
+      height: 2.5rem;
+    }
 
+      &-wrapper{
+        display: flex;
+        flex-direction: row;
+        width: 95%;
+        align-items: center;
+        margin:auto;
+        @include tablet {
+         
+        }
+      }
+      &-link{
+        width: 90%;
+        text-align: center;
+    text-decoration: none;
+    color: white;
+    @include tablet {
+      
+    }
+
+      }
+    }
     @include tablet {
       // grid-template-columns: repeat(20, 1rem);
-     }
-    &-searchbox{
-      width:100%;
-      height: 2.25rem;
-      
-          @include tablet{
-           width: 50%;
-           grid-column-start: 1;
-          }
+    }
 
+    
+    &-searchbox {
+      width: 100%;
+      height: 2.25rem;
+      grid-column-start: 1;
+      grid-column-end: 10;
+
+      @include tablet {
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row-start: 1;
+
+      }
     }
     &-avatar {
       width: 2.25rem;
       height: 2.25rem;
       border-radius: 50%;
       justify-self: center;
-
-      @include tablet{
-        width: 30%;
-        grid-column-start: -2;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        justify-self: center;
-       }
-    }
-
-  }
-  &-button {
-    width: 95%;
-    background-color: $BrainFlix-Blue;
-    border: none;
-    color: white;
-    padding: 15px 2rem;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1rem;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 0.25rem;
-    @include mobile-labels-buttons;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
-    gap: 30%;
-      &-link{
-        grid-column-start: 1;
-        grid-column-end: 3;
-        text-decoration: none;
-        @include tablet{
-          width: 30%;
-          grid-column-start: 2;
-          grid-column-end: 1;
+      object-fit: cover;
+      
+      @include tablet {
+          grid-column-start: 9;
           grid-row-start: 1;
-          justify-self: end;
-         }
       }
-    
-    
-
+    }
   }
 
-  &-logo {
-    height: 1.5625rem;
-    width: 7.5rem;
-  }
+  
+
+ 
 }

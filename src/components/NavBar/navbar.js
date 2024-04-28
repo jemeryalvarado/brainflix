@@ -20,14 +20,18 @@ export default function NavBar() {
           ></input>
           <img src={avatar} alt="avatar" className="navbar-form-avatar" />
 
-          <Link to="/upload" className="navbar-button-link">
-          <button className="navbar-button">
-            <div className="navbar-button-icon">
-              <img className="icon" src={uploadArrow} alt="Upload" />
-            </div>
+
+          <button  className="navbar-form-bl">
+            <div className="navbar-form-bl-wrapper">
+
+            <img className="icon" src={uploadArrow} alt="Upload" />
+          <Link to="/upload" className="navbar-form-bl-link">
+
+          
             UPLOAD
-          </button>
         </Link>
+        </div>
+          </button>
       </form>
     </nav>
   );

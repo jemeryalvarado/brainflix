@@ -12,7 +12,7 @@ function VideoList({ allVideos, videoClick }) {
               key={video.id}
               onClick={() => videoClick(video.id)}
             >
-              <img src={video.image} alt="keyframe" />
+              <img src={video.image} alt="keyframe" height={64}/>
 
               <div className="videos-list-info">
                 <div className="videos-title" key={video.id}>
