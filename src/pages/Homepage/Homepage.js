@@ -39,10 +39,10 @@ const Home = () => {
     });
 }, [id]);
 
-  const videoClick = (id) => {
-    setCurrent(id);
-    navigate(`/video/${id}`);
-  };
+  // const videoClick = (id) => {
+  //   setCurrent(id);
+  //   navigate(`/video/${id}`);
+  // };
 
   return (
     <>
