@@ -3,3 +3,23 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/mediaqueries" as *;
 
+.wrapper {
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+  &-info {
+    @include desktop {
+    width: 60%;
+    border-right: solid $Mercury 2px;
+
+    }
+  }
+  &-videos {
+    @include desktop {
+    width: 30%;
+    }
+  }
+}

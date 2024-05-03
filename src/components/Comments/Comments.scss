@@ -30,6 +30,9 @@
       width: 100%;
       border-bottom: solid $Mercury 2px;
       margin-top: 1rem;
+      @include desktop{
+        width: 105.6%;
+      }
     }
   }
 
@@ -72,6 +75,7 @@
     grid-column-end: -3;
 
     }
+    
   }
   .button {
     width: 100%;
@@ -96,6 +100,9 @@
       height: 2.5rem;
       margin: 0;
       width: 100%;
+    }
+    @include tablet{
+      width: 95%;
     }
 
     &-name{
@@ -125,6 +132,10 @@
     @include tablet{
       grid-template-columns: 8% 92%;
     }
+    @include desktop{
+      width: 105.5%;
+
+    }
     &-avblank {
       width: 2.25rem;
       height: 2.25rem;
@@ -152,6 +163,8 @@
       @include mobile-subheader;
       font-size: 1rem;
       color: $Mercury;
+      @include desktop{
+padding-right: 5%;      }
     }
   }
 }
