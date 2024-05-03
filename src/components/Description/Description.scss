@@ -11,6 +11,9 @@
     @include mobile-page-header;
     font-family: Avenir-Next-Bold;
     border-bottom: solid 0.125rem $Mercury;
+    @include desktop{
+      border-bottom: 0;
+    }
   }
 
   &-data {
@@ -19,6 +22,10 @@
     flex-direction: row;
     justify-content: space-between;
     color: $Silver;
+    border-bottom: solid 0.125rem $Mercury;
+    @include desktop{
+      width: 105.6%;
+    }
     &-ct{
       @include tablet{
         display: flex;
@@ -31,6 +38,7 @@
         display: flex;
         flex-direction: row;
         gap:2.5rem;
+        padding-right: 5%;
       }
     }
 
@@ -38,7 +46,7 @@
       font-family: Avenir-Next-Demi;
       color: $BrainFlix-Black;
     }
-    border-bottom: solid 0.125rem $Mercury;
+    
   }
 }
 .space {
