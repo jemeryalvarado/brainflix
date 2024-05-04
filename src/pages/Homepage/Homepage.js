@@ -55,7 +55,7 @@ const Home = () => {
               <Comments current={current} details={videoDetails} />
             </div>
             <div className="wrapper-videos">
-              <Videos allVideos={relatedVideos} videoClick={videoClick} />
+              <Videos allVideos={relatedVideos}  />
             </div>
           </div>
         </section>
