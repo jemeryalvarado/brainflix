@@ -1,40 +1,39 @@
+import "./VideoUpload.scss";
+import videoUpload from '../../assets/Images/Upload-video-preview.jpg'
 
 const VideoUpload = () => {
   return (
     <div className="video-upload">
       <h2 className="video-upload__title">Upload Video</h2>
       <div className="video-upload__thumbnail">
-        <h3 className="video-upload__thumbnail-title">Video Thumbnail</h3>
+        <h3 className="video-upload__thumbnail-title">VIDEO THUMBNAIL</h3>
         <img
-          src="https://via.placeholder.com/150"
+          src={videoUpload}
           alt="Video Thumbnail"
           className="video-upload__thumbnail-image"
         />
       </div>
       <form className="video-upload__form">
         <div className="form-group">
-          <label htmlFor="video-title" className="form-label">
-            Add a title to your video
+          <label  className="form-label">
+            TITLE YOUR VIDEO
           </label>
-          <textarea
+          <input
+          type="text"
             id="video-title"
             name="video-title"
-            className="form-control"
-            rows="3"
-            placeholder="Enter your video title..."
-          ></textarea>
+            placeholder="Add a title to your video"
+          ></input>
         </div>
         <div className="form-group">
-          <label htmlFor="video-description" className="form-label">
-            Add a description to your video
+          <label  className="form-label">
+            ADD A VIDEO DESCRIPTION
           </label>
-          <textarea
+          <input
             id="video-description"
             name="video-description"
-            className="form-control"
-            rows="5"
-            placeholder="Enter your video description..."
-          ></textarea>
+            placeholder="Add a description to your video"
+          ></input>
         </div>
         <button type="submit" className="btn btn-primary">
           Publish
