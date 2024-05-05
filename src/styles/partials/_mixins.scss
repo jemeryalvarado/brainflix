@@ -1,4 +1,4 @@
-
+@use './partials' as *;
 // DESKTOP & TABLET TEXT STYLES
 
 @mixin page-header{
@@ -55,6 +55,7 @@
     font-size: .8125rem;
     line-height:  1.125rem;
      font-weight:  400;
+     color: $BrainFlix-DarkBlack;
 }
 
 @mixin mobile-labels-buttons{
