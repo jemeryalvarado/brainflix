@@ -9,6 +9,7 @@ const VideoUpload = () => {
   return (
     <div className="video-upload">
       <h2 className="video-upload__title">Upload Video</h2>
+      <section className="video-thumbnail-form__wrapper">
       <div className="video-upload__thumbnail">
         <h3 className="video-upload__thumbnail-title">VIDEO THUMBNAIL</h3>
         <img
@@ -36,6 +37,7 @@ const VideoUpload = () => {
           ></input>
         </div>
       </form>
+      </section>
       <div className="btns">
         <button type="submit" className="btn btn-primary">
           <img class="icon" src={publish} alt="Upload" />
