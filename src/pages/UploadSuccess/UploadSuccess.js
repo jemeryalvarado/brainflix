@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 import "./UploadSuccess.scss"
-import "../Homepage/Homepage.scss"
 
 function UploadSuccess (){
 
     return(
-        <div className="video-sucess">
+        <div className="video-success">
             <h2>Video Successfully Uploaded</h2>
 
-            <Link to = "/" className="btn btn-primary"> Go to Homepage</Link>
+            <Link to = "/" className="video-success__button"> Go to Homepage</Link>
         </div>
     );
 };

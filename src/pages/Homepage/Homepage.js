@@ -21,7 +21,7 @@ const Home = () => {
     setCurrent(id || defaultVideoId);
 
     axios
-    .get(`http://localhost:8000/videoDetails/${id || defaultVideoId}`)
+    .get(`http://localhost:8000/videos/${id || defaultVideoId}`)
     .then((response) => {
       setVideoDetails(response.data);
     })
@@ -30,7 +30,7 @@ const Home = () => {
     });
 
   axios
-    .get("http://localhost:8000/allVideos")
+    .get("http://localhost:8000/videos")
     .then((response) => {
       setRelatedVideos(response.data.filter((video) => video.id !== id));
     })
