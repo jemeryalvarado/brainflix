@@ -1,5 +1,9 @@
 import "./VideoUpload.scss";
-import videoUpload from '../../assets/Images/Upload-video-preview.jpg'
+import videoThumbnail from '../../assets/Images/Upload-video-preview.jpg'
+import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import publish from "../../assets/Icons/publish.svg"
 
 const VideoUpload = () => {
   return (
@@ -8,7 +12,7 @@ const VideoUpload = () => {
       <div className="video-upload__thumbnail">
         <h3 className="video-upload__thumbnail-title">VIDEO THUMBNAIL</h3>
         <img
-          src={videoUpload}
+          src={videoThumbnail}
           alt="Video Thumbnail"
           className="video-upload__thumbnail-image"
         />
@@ -35,15 +39,21 @@ const VideoUpload = () => {
             placeholder="Add a description to your video"
           ></input>
         </div>
+        <div className="btns">
+
         <button type="submit" className="btn btn-primary">
-          Publish
+        <img class="icon" src={publish} alt="Upload"/>
+         <p className="btn-primary-name">Publish</p> 
         </button>
+
         <button type="button" className="btn btn-secondary">
           Cancel
         </button>
+        </div>
       </form>
     </div>
   );
 };
 
 export default VideoUpload;
+
