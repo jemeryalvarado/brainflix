@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import axios from "axios";
-import Description from "../../components/Description/Description.js";
-import Videos from "../../components/Videos/Videos.js";
-import Comments from "../../components/Comments/Comments.js";
+import { Link } from "react-router-dom";
 import "./UploadSuccess.scss"
+import "../Homepage/Homepage.scss"
 
+function UploadSuccess (){
+
+    return(
+        <div className="video-sucess">
+            <h2>Video Successfully Uploaded</h2>
+
+            <Link to = "/" className="btn btn-primary"> Go to Homepage</Link>
+        </div>
+    );
+};
+export default UploadSuccess;
