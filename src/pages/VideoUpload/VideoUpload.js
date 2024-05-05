@@ -11,7 +11,8 @@ const VideoUpload = () => {
     description: "",
   });
 
-  const goHome = useNavigate();
+  const [uploadSuccess, setUploadSuccess] = useState(false); 
+  const goSuccess = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,7 +31,8 @@ const VideoUpload = () => {
           description: "",
         });
 
-        goHome("/");
+        setUploadSuccess(true);
+        goSuccess("/success");
       })
       .catch((error) => {
         console.log("error uploading video:", error);
@@ -46,6 +48,7 @@ const VideoUpload = () => {
 
   return (
     <div className="video-upload">
+      
       <h2 className="video-upload__title">Upload Video</h2>
       <section className="video-thumbnail-form__wrapper">
         <div className="video-upload__thumbnail">
