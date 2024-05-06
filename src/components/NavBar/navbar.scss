@@ -19,6 +19,10 @@
     width: 95%;
     margin: auto;
   }
+  @include desktop {
+    width: 85%;
+    justify-content: space-between;
+  }
   &-logo {
     height: 1.5625rem;
     width: 7.5rem;
@@ -28,69 +32,88 @@
     gap: 1rem;
     width: 90%;
     grid-template-columns: repeat(10, auto);
-    // grid-template-rows: repeat(2, auto);
     @include tablet {
       display: grid;
       gap: 0rem;
       width: 90%;
-      
     }
-    &-bl{
+    @include desktop {
+      width: 80%;
+    }
+    &-bl {
       width: 100%;
       height: 3rem;
       grid-column-start: 1;
       grid-column-end: 11;
       background-color: $BrainFlix-Blue;
-    border: none;
-    border-radius: 0.25rem;
-    font-size: 1rem;
-    line-height: 1.25rem;
-    font-weight: 700;
-    @include tablet {
-      grid-column-start: 7;
-      grid-column-end: 9;
-      grid-row-start: 1;
-      height: 2.5rem;
-    }
+      border: none;
+      border-radius: 0.25rem;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      font-weight: 700;
+      @include tablet {
+        grid-column-start: 7;
+        grid-column-end: 9;
+        grid-row-start: 1;
+        height: 2.5rem;
+      }
+      @include desktop {
+        grid-column-start: 8;
+        grid-column-end: 9;
+        grid-row-start: 1;
+        height: 2.5rem;
+        width: 75%;
+        margin-left: 1.5rem;
+      }
 
-      &-wrapper{
+      &-wrapper {
         display: flex;
         flex-direction: row;
         width: 95%;
         align-items: center;
-        margin:auto;
+        margin: auto;
         @include tablet {
-         
         }
       }
-      &-link{
+      &-link {
         width: 90%;
         text-align: center;
-    text-decoration: none;
-    color: white;
-    @include tablet {
-      
-    }
-
+        text-decoration: none;
+        color: white;
+        @include tablet {
+        }
       }
     }
-    @include tablet {
-      // grid-template-columns: repeat(20, 1rem);
-    }
 
-    
     &-searchbox {
       width: 100%;
       height: 2.25rem;
       grid-column-start: 1;
       grid-column-end: 10;
+      border-radius: 0.25rem;
+      border: 2px solid $Mercury;
+      background-color: $Alabaster;
 
       @include tablet {
         grid-column-start: 3;
         grid-column-end: 6;
         grid-row-start: 1;
-
       }
+      @include desktop {
+        grid-column-start: 6;
+        grid-column-end: 8;
+        grid-row-start: 1;
+        height: 2.5rem;
+        width: 85%;
+        justify-self: right;
+      }
+    }
+    ::placeholder {
+      font-family: Avenir-Next;
+      text-indent: 1rem;
+    }
+    input:focus::placeholder{
+      color: transparent;
     }
     &-avatar {
       width: 2.25rem;
@@ -98,15 +121,15 @@
       border-radius: 50%;
       justify-self: center;
       object-fit: cover;
-      
+
       @include tablet {
-          grid-column-start: 9;
-          grid-row-start: 1;
+        grid-column-start: 9;
+        grid-row-start: 1;
+      }
+      @include tablet {
+        justify-self: left;
+        margin-left: 1rem;
       }
     }
   }
-
-  
-
- 
 }
