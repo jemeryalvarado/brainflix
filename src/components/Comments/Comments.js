@@ -1,10 +1,11 @@
+import React, { useState } from 'react';
 import "./Comments.scss";
 import comment from "../../assets/Icons/add_comment.svg";
 import avatar from '../../assets/Images/Mohan-muruge.jpg'
 
-
-
 const Comments = ({ details }) => {
+  const [commentText, setCommentText] = useState('');
+  const [error, setError] = useState(false);
   const display = details;
   const displayComments = display.comments;
 
@@ -16,22 +17,46 @@ const Comments = ({ details }) => {
     return `${month}/${day}/${year}`;
   };
 
+  const handleCommentChange = (e) => {
+    setCommentText(e.target.value);
+    setError(false); 
+    if (e.target.value.trim()) {
+      e.target.classList.add('has-text');
+    } else {
+      e.target.classList.remove('has-text');
+    }
+  };
+
+  const handleBlur = (e) => {
+    if (!commentText.trim()) {
+      setError(true);
+    }
+  };
+
   return (
     <div className="comments">
       <section className="comments-form">
         <div className="comments-form-avatar">
           <img src={avatar} alt="avatar" />
         </div>
-        <form>
+        <div className="form-container">
           <h5>JOIN THE CONVERSATION</h5>
-          <input id="commenttext" type="text" placeholder="Add a new comment" />
-          <button class="button">
+          <input 
+            id="commenttext" 
+            type="text" 
+            placeholder="Add a new comment" 
+            value={commentText} 
+            onChange={handleCommentChange} 
+            onBlur={handleBlur}
+            className={error ? 'error' : ''}
+          />
+          <button className="button" onClick={() => setCommentText('')}>
             <img src={comment} alt="comment" height={20}/>
             <div className="button-name">
-            COMMENT
+              COMMENT
             </div>
           </button>
-        </form>
+        </div>
       </section>
 
       <div className="comments-form-break"></div>
@@ -49,4 +74,3 @@ const Comments = ({ details }) => {
 };
 
 export default Comments;
-
