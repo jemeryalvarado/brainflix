@@ -3,30 +3,38 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/mediaqueries" as *;
 
-.video-success{
-    font-family: Avenir-Next-Bold;
-    width: 100%;
-    h2{
-        @include mobile-page-header;
-        color: $BrainFlix-Black;
-        text-align: center;
-    }
-    &__button{
-        width: 50%;
-        height: 2.25rem;
-        grid-column-start: 1;
-        grid-column-end: 11;
-        background-color: #0095FF;
-        border: none;
-        border-radius: 0.25rem;
-        font-size: .75rem;
-        line-height: 1.25rem;
-        font-weight: 700;
-        display: flex;
-        flex-direction: row;
-
-        align-items: center;
-        margin: auto;
-    }
+.video-success {
+  font-family: Avenir-Next-Bold;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  background-color: $Alabaster;
+  h2 {
+    @include mobile-page-header;
+    color: $BrainFlix-Blue;
+    text-align: center;
+  }
+.video-wrapper{
+    text-decoration: none;
 }
+  .video-button {
+    height: 3rem;
+    background-color: $BrainFlix-Blue;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 15rem;
+    align-items: center;
+    margin: 0;
+    text-decoration: none;
+    color: $White;
 
+  }
+}

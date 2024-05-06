@@ -5,9 +5,10 @@ function UploadSuccess (){
 
     return(
         <div className="video-success">
-            <h2>Video Successfully Uploaded</h2>
+            <h2>Video Successfully Uploaded !</h2>
 
-            <Link to = "/" className="video-success__button"> Go to Homepage</Link>
+            <Link to = "/" className="video-wrapper"> <button className="video-button">GO TO HOMEPAGE</button>
+            </Link>
         </div>
     );
 };
