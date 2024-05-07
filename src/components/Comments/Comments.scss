@@ -7,6 +7,7 @@
   height: auto;
   width: 90%;
   margin: auto;
+  font-family: Avenir-Next;
 
   &-form {
     display: grid;
@@ -36,7 +37,7 @@
 
     &-break {
       width: 100%;
-      border-bottom: solid $Mercury 2px;
+      border-bottom: solid $Mercury 1px;
       margin-top: 1rem;
       @include desktop{
         width: 105.6%;
@@ -48,10 +49,17 @@
     margin-top: 0;
     margin-bottom: 0;
     color: $Mercury;
-    font-family: Avenir-Next-Demi;
+    font-family: Avenir-Next-Bold;
     font-size: 1rem;
     grid-row-start: 1;
     margin-bottom: .5rem;
+    @include mobile-subheader;
+
+    @include tablet{
+      @include subheader;
+      font-size: .875rem;
+      font-weight: 700;
+    }
   }
   #commenttext {
     border-radius: 0.25rem;
@@ -88,6 +96,11 @@
   position: absolute;
   top: .5rem;
   color: $BrainFlix-DarkBlack;
+@include mobile-body-copy;
+
+@include tablet{
+  @include body-copy;
+}
 }
 
 textarea:focus::placeholder{
@@ -140,9 +153,10 @@ textarea:focus::placeholder{
   &-text {
     display: grid;
     grid-template-columns: 18% 82%;
-    border-bottom: solid $Mercury 2px;
+    border-bottom: solid $Mercury 1px;
     margin-top: 1.5rem;
     padding-bottom: 1rem;
+    
     
     
     @include tablet{

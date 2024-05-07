@@ -26,6 +26,7 @@
   &-logo {
     height: 1.5625rem;
     width: 7.5rem;
+    background-color: $White;
   }
   &-form {
     display: grid;
@@ -62,7 +63,7 @@
         grid-column-end: 9;
         grid-row-start: 1;
         height: 2.5rem;
-        width: 75%;
+        width: 80%;
         margin-left: 1.5rem;
       }
 
@@ -91,13 +92,14 @@
       grid-column-start: 1;
       grid-column-end: 10;
       border-radius: 0.25rem;
-      border: 2px solid $Mercury;
+      border: 1px solid $Mercury;
       background-color: $Alabaster;
 
       @include tablet {
         grid-column-start: 3;
         grid-column-end: 6;
         grid-row-start: 1;
+        height: 2.5rem;
       }
       @include desktop {
         grid-column-start: 6;
@@ -121,10 +123,13 @@
       border-radius: 50%;
       justify-self: center;
       object-fit: cover;
+      background-color: $Mercury;
 
       @include tablet {
         grid-column-start: 9;
         grid-row-start: 1;
+        height: 2.5rem;
+        width: 2.5rem;
       }
       @include tablet {
         justify-self: left;

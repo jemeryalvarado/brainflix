@@ -6,13 +6,13 @@
 .video-upload {
   width: 90%;
   margin: auto;
-  border-top: 1px solid $Mercury;
   display: flex;
   flex-direction: column;
-  font-family: Avenir-Next-Bold;
-//   @include desktop{
-//     flex-direction: row;
-//   }
+  font-family: Avenir-Next-Demi;
+  @include desktop{
+    width: 80%
+  }
+
 
   &__title {
     @include mobile-page-header;
@@ -50,8 +50,10 @@
       height: auto;
       object-fit: cover;
       border-radius: 0.25rem;
+      background-color: $Mercury;
+
       @include tablet {
-        width: 55%;
+        width: 50%;
       }
       @include desktop{
         width: 100%;
@@ -73,15 +75,19 @@
       width: 100%;
       padding: 10px;
       font-size: 16px;
-      border: 1px solid #ccc;
+      border: 1px solid $Mercury;
       border-radius: 10px;
 
       &:focus {
-        border-color: #aaa;
+      border: 2px solid $BrainFlix-Blue;
+      
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        
       }
     }
   }
+
+
 .video-thumbnail-form__wrapper{
     @include desktop{
         display: flex;
@@ -106,16 +112,19 @@
       input {
         width: 99%;
         font-size: 16px;
-        border: 1px solid #ccc;
+        border: 1px solid $Mercury;
         border-radius: 4px;
         @include mobile-body-copy;
         font-family: Avenir-Next;
         height: 2.25rem;
         text-indent: 0.5rem;
         background-color: $Alabaster;
+        @include desktop{
+          width: 134%;
+        }
 
         &:focus {
-          border-color: #aaa;
+          border: 2px solid $BrainFlix-Blue;
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
       }
@@ -136,6 +145,11 @@
     position: absolute;
     left: 0px;
     top: 0.75rem;
+
+    
+  }
+  input:focus::placeholder{
+    color: transparent;
   }
   .btns {
     display: flex;
@@ -147,19 +161,26 @@
       flex-direction: row-reverse;
       gap: 4rem;
       border-top: 1px solid $Mercury;
-      margin: 2rem 0 1rem 0;
+      margin: 3rem 0 1rem 0;
+      padding: 2rem 0 2rem 0;
+    }
+    @include desktop{
+      border: none;
+      width: 136%;
+      margin-top: 3rem;
     }
   }
   .btn {
     height: 3rem;
-    background-color: #0095ff;
+    background-color: $BrainFlix-Blue;
     border: none;
     border-radius: 0.25rem;
     font-size: 1rem;
     line-height: 1.25rem;
     font-weight: 700;
+   
     &-primary {
-      color: #fff;
+      color: $White;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -184,12 +205,26 @@
     }
 
     &-secondary {
-      background-color: white;
+      background-color: $White;
       color: $BrainFlix-Blue;
 
       &:hover {
-        background-color: #444;
+        background-color: $Mercury;
       }
     }
   }
+}
+.break{
+  width: 100%;
+  border: .5px solid $Mercury;
+}
+.break-2{
+  @include desktop{
+    
+    margin-top: 2rem;
+    width: 334%;
+  border: .5px solid $Mercury;
+  }
+  
+
 }
