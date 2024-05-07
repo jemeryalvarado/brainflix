@@ -3,6 +3,7 @@ import avatar from "../../assets/Images/Mohan-muruge.jpg";
 import uploadArrow from "../../assets/Icons/upload.svg";
 import "./navbar.scss";
 import { Link } from "react-router-dom";
+import searchIcon from "../../assets/Icons/search.svg"
 
 
 export default function NavBar() {
@@ -17,7 +18,8 @@ export default function NavBar() {
             type="text"
             placeholder="Search"
             className="navbar-form-searchbox"
-          ></input>
+          > 
+          </input>
           <img src={avatar} alt="avatar" className="navbar-form-avatar" />
 
 

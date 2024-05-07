@@ -9,19 +9,19 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  font-family: Avenir-Next;
   
 
   @include tablet{
-    width: 40%;
-    margin:0 0 0 5%;
+    width: 60%;
+    margin:0 0 0 3%;
   }
   @include desktop{
     margin:0 ;
-    width: 60%;
   }
 
   &-list {
-    width: 100%;
+    width: 95%;
     height: 4.5rem;
     display: flex;
     flex-direction: row;
@@ -39,7 +39,6 @@
     img {
       border-radius: 0.25rem;
       width: 6rem;
-      height: 4rem;
       object-fit: cover;
     }
   }
@@ -49,6 +48,13 @@
     flex-direction: column;
     font-size: 0.9rem;
     justify-content: space-around;
+
+    @include tablet{
+      width: 35%;
+    }
+    @include desktop{
+      width: 45%;
+    }
     
   }
 
@@ -63,6 +69,15 @@ h2{
   font-size: 1rem;
   color: $Mercury;
   margin: 1rem 0 0 5%;
+  @include mobile-section-header;
+  font-family: Avenir-Next-Bold;
+  @include tablet{
+    margin: 1rem 0 0 5%;
+    @include section-header;
+    font-size: .875rem;
+
+  }
+
 }
 span{
   justify-self: end;
