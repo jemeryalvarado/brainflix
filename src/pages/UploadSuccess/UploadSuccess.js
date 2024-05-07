@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
-import "./UploadSuccess.scss"
+import "./UploadSuccess.scss";
 
-function UploadSuccess (){
+function UploadSuccess() {
+  return (
+    <div className="video-success">
+      <h2>Video Successfully Uploaded !</h2>
 
-    return(
-        <div className="video-success">
-            <h2>Video Successfully Uploaded !</h2>
-
-            <Link to = "/" className="video-wrapper"> <button className="video-button">GO TO HOMEPAGE</button>
-            </Link>
-        </div>
-    );
-};
+      <Link to="/" className="video-wrapper">
+        {" "}
+        <button className="video-button">GO TO HOMEPAGE</button>
+      </Link>
+    </div>
+  );
+}
 export default UploadSuccess;

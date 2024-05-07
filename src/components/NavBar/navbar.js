@@ -3,8 +3,6 @@ import avatar from "../../assets/Images/Mohan-muruge.jpg";
 import uploadArrow from "../../assets/Icons/upload.svg";
 import "./NavBar.scss";
 import { Link } from "react-router-dom";
-import searchIcon from "../../assets/Icons/search.svg"
-
 
 export default function NavBar() {
   return (
@@ -14,26 +12,21 @@ export default function NavBar() {
       </Link>
 
       <form className="navbar-form">
-          <input
-            type="text"
-            placeholder="Search"
-            className="navbar-form-searchbox"
-          > 
-          </input>
-          <img src={avatar} alt="avatar" className="navbar-form-avatar" />
+        <input
+          type="text"
+          placeholder="Search"
+          className="navbar-form-searchbox"
+        ></input>
+        <img src={avatar} alt="avatar" className="navbar-form-avatar" />
 
-
-          <button  className="navbar-form-bl">
-            <div className="navbar-form-bl-wrapper">
-
+        <button className="navbar-form-bl">
+          <div className="navbar-form-bl-wrapper">
             <img className="icon" src={uploadArrow} alt="Upload" />
-          <Link to="/upload" className="navbar-form-bl-link">
-
-          
-            UPLOAD
-        </Link>
-        </div>
-          </button>
+            <Link to="/upload" className="navbar-form-bl-link">
+              UPLOAD
+            </Link>
+          </div>
+        </button>
       </form>
     </nav>
   );

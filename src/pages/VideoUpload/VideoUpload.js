@@ -11,7 +11,7 @@ const VideoUpload = () => {
     description: "",
   });
 
-  const [uploadSuccess, setUploadSuccess] = useState(false); 
+  const [uploadSuccess, setUploadSuccess] = useState(false);
   const goSuccess = useNavigate();
 
   const handleSubmit = (e) => {
@@ -49,55 +49,55 @@ const VideoUpload = () => {
   return (
     <>
       <div className="break"></div>
-    <div className="video-upload">
-      <h2 className="video-upload__title">Upload Video</h2>
-      <section className="video-thumbnail-form__wrapper">
-        <div className="video-upload__thumbnail">
-          <h3 className="video-upload__thumbnail-title">VIDEO THUMBNAIL</h3>
-          <img
-            src={videoThumbnail}
-            alt="Video Thumbnail"
-            className="video-upload__thumbnail-image"
-          />
-          <div className="break-2"></div>
-        </div>
-        <form className="video-upload__form" onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label className="form-label">TITLE YOUR VIDEO</label>
-            <input
-              type="text"
-              id="video-title"
-              name="title"
-              placeholder="Add a title to your video"
-              value={formData.title}
-              onChange={handleChange}
-              required
-            ></input>
+      <div className="video-upload">
+        <h2 className="video-upload__title">Upload Video</h2>
+        <section className="video-thumbnail-form__wrapper">
+          <div className="video-upload__thumbnail">
+            <h3 className="video-upload__thumbnail-title">VIDEO THUMBNAIL</h3>
+            <img
+              src={videoThumbnail}
+              alt="Video Thumbnail"
+              className="video-upload__thumbnail-image"
+            />
+            <div className="break-2"></div>
           </div>
-          <div className="form-group">
-            <label className="form-label">ADD A VIDEO DESCRIPTION</label>
-            <input
-              type="text"
-              id="video-description"
-              name="description"
-              placeholder="Add a description to your video"
-              value={formData.description}
-              onChange={handleChange}
-              required
-            ></input>
-          </div>
-          <div className="btns">
-            <button type="submit" className="btn btn-primary">
-              <img className="icon" src={publish} alt="Upload" />
-              <p className="btn-primary-name">Publish</p>
-            </button>
-            <button type="button" className="btn btn-secondary">
-              Cancel
-            </button>
-          </div>
-        </form>
-      </section>
-    </div>
+          <form className="video-upload__form" onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label className="form-label">TITLE YOUR VIDEO</label>
+              <input
+                type="text"
+                id="video-title"
+                name="title"
+                placeholder="Add a title to your video"
+                value={formData.title}
+                onChange={handleChange}
+                required
+              ></input>
+            </div>
+            <div className="form-group">
+              <label className="form-label">ADD A VIDEO DESCRIPTION</label>
+              <input
+                type="text"
+                id="video-description"
+                name="description"
+                placeholder="Add a description to your video"
+                value={formData.description}
+                onChange={handleChange}
+                required
+              ></input>
+            </div>
+            <div className="btns">
+              <button type="submit" className="btn btn-primary">
+                <img className="icon" src={publish} alt="Upload" />
+                <p className="btn-primary-name">Publish</p>
+              </button>
+              <button type="button" className="btn btn-secondary">
+                Cancel
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
     </>
   );
 };

@@ -12,14 +12,13 @@
   }
   &-info {
     @include desktop {
-    width: 60%;
-    border-right: solid $Mercury 2px;
-
+      width: 60%;
+      border-right: solid $Mercury 2px;
     }
   }
   &-videos {
     @include desktop {
-    width: 30%;
+      width: 30%;
     }
   }
 }

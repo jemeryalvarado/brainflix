@@ -3,21 +3,19 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/mediaqueries" as *;
 
-
 .videos {
   width: 19rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   font-family: Avenir-Next;
-  
 
-  @include tablet{
+  @include tablet {
     width: 60%;
-    margin:0 0 0 3%;
+    margin: 0 0 0 3%;
   }
-  @include desktop{
-    margin:0 ;
+  @include desktop {
+    margin: 0;
   }
 
   &-list {
@@ -31,9 +29,8 @@
     text-decoration: none;
     color: black;
 
-    @include desktop{
+    @include desktop {
       width: 170%;
-      
     }
 
     img {
@@ -49,36 +46,31 @@
     font-size: 0.9rem;
     justify-content: space-around;
 
-    @include tablet{
+    @include tablet {
       width: 35%;
     }
-    @include desktop{
+    @include desktop {
       width: 45%;
     }
-    
   }
 
   &-title {
     font-family: Avenir-Next-Demi;
     width: 100%;
-    
   }
 }
-h2{
-  
+h2 {
   font-size: 1rem;
   color: $Mercury;
   margin: 1rem 0 0 5%;
   @include mobile-section-header;
   font-family: Avenir-Next-Bold;
-  @include tablet{
+  @include tablet {
     margin: 1rem 0 0 5%;
     @include section-header;
-    font-size: .875rem;
-
+    font-size: 0.875rem;
   }
-
 }
-span{
+span {
   justify-self: end;
 }

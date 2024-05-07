@@ -2,7 +2,7 @@ import "./Description.scss";
 import eyes from "../../assets/Icons/views.svg";
 import heart from "../../assets/Icons/likes.svg";
 
-const Description = ({ current, details }) => {
+const Description = ({ details }) => {
   const display = details;
 
   const formattedTimestamp = new Date(display.timestamp).toLocaleDateString('en-US', {

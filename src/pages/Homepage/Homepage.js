@@ -5,8 +5,7 @@ import Hero from "../../components/Hero/Hero.js";
 import Description from "../../components/Description/Description.js";
 import Videos from "../../components/Videos/Videos.js";
 import Comments from "../../components/Comments/Comments.js";
-import "./Homepage.scss"
-
+import "./Homepage.scss";
 
 const Home = () => {
   const { id } = useParams();
@@ -14,30 +13,28 @@ const Home = () => {
   const [current, setCurrent] = useState(id || defaultVideoId);
   const [videoDetails, setVideoDetails] = useState();
   const [relatedVideos, setRelatedVideos] = useState([]);
-  const jlaKey = "c5f082c8-8e98-4245-8513-1866d16d5c51";
-  const navigate = useNavigate();
 
   useEffect(() => {
     setCurrent(id || defaultVideoId);
 
     axios
-    .get(`http://localhost:8000/videos/${id || defaultVideoId}`)
-    .then((response) => {
-      setVideoDetails(response.data);
-    })
-    .catch((error) => {
-      console.error("Error fetching video details:", error);
-    });
+      .get(`http://localhost:8000/videos/${id || defaultVideoId}`)
+      .then((response) => {
+        setVideoDetails(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching video details:", error);
+      });
 
-  axios
-    .get("http://localhost:8000/videos")
-    .then((response) => {
-      setRelatedVideos(response.data.filter((video) => video.id !== id));
-    })
-    .catch((error) => {
-      console.error("Error fetching related videos:", error);
-    });
-}, [id]);
+    axios
+      .get("http://localhost:8000/videos")
+      .then((response) => {
+        setRelatedVideos(response.data.filter((video) => video.id !== id));
+      })
+      .catch((error) => {
+        console.error("Error fetching related videos:", error);
+      });
+  }, [id]);
 
   return (
     <>
@@ -50,7 +47,7 @@ const Home = () => {
               <Comments current={current} details={videoDetails} />
             </div>
             <div className="wrapper-videos">
-              <Videos allVideos={relatedVideos}  />
+              <Videos allVideos={relatedVideos} />
             </div>
           </div>
         </section>

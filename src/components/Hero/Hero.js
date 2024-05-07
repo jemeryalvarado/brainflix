@@ -1,5 +1,4 @@
-import VideoList from "../Videos/Videos";
-import { useState } from "react";
+
 import "./Hero.scss";
 
 
