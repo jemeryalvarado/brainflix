@@ -40,8 +40,10 @@ const Comments = ({ details }) => {
           <img src={avatar} alt="avatar" />
         </div>
         <div className="form-container">
+          <div className="form-container-group">
           <h5>JOIN THE CONVERSATION</h5>
-          <input 
+         
+          <textarea 
             id="commenttext" 
             type="text" 
             placeholder="Add a new comment" 
@@ -50,6 +52,7 @@ const Comments = ({ details }) => {
             onBlur={handleBlur}
             className={error ? 'error' : ''}
           />
+           </div>
           <button className="button" onClick={() => setCommentText('')}>
             <img src={comment} alt="comment" height={20}/>
             <div className="button-name">

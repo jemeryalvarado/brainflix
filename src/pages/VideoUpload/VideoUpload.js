@@ -47,8 +47,9 @@ const VideoUpload = () => {
   };
 
   return (
+    <>
+      <div className="break"></div>
     <div className="video-upload">
-      
       <h2 className="video-upload__title">Upload Video</h2>
       <section className="video-thumbnail-form__wrapper">
         <div className="video-upload__thumbnail">
@@ -58,6 +59,7 @@ const VideoUpload = () => {
             alt="Video Thumbnail"
             className="video-upload__thumbnail-image"
           />
+          <div className="break-2"></div>
         </div>
         <form className="video-upload__form" onSubmit={handleSubmit}>
           <div className="form-group">
@@ -96,6 +98,7 @@ const VideoUpload = () => {
         </form>
       </section>
     </div>
+    </>
   );
 };
 

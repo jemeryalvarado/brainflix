@@ -18,12 +18,6 @@ $desktop: 1280px;
   }
 }
 
-@mixin connection2 {
-  @media (min-width: $connection2) {
-    @content;
-  }
-}
-
 @mixin tablet {
   @media (min-width: $tablet) {
     @content;
